@@ -33,7 +33,7 @@ Consequently, you get the same cookie-consent box each and every time you visit 
 
 Consent-O-Matic is a browser extension (available for [Chrome](https://chrome.google.com/webstore/detail/consent-o-matic/mdjildafknihdffpkfmmpnpoiajfjnjd), [Firefox](https://addons.mozilla.org/firefox/addon/consent-o-matic/), Edge and Safari on iOS/MacOS) that recognizes a great deal of those CMP (Consent Management Provider) pop-ups that we've all grown to both love and hate. But since you've told it your preference in cookies upon installation, it will autofill those forms for you when it encounters them. And let you know that it did so, with a satisfying little checkmark next to its icon. Nice.
 
-And since, it's an open project by the Centre for Advanced Visualisation and Interaction (CAVI) at Aarhus University, regular people can contribute by adding new rules, updating old rules, or even adding to the documentation (like these very paragraphs you're reading now, written by someone who just happened to discover the project and wanted to help.) to make the extension even easier for others to use.
+And, since it's an open project by the Centre for Advanced Visualisation and Interaction (CAVI) at Aarhus University, regular people can contribute by adding new rules, updating old rules, or even adding to the documentation (like these very paragraphs you're reading now, written by someone who just happened to discover the project and wanted to help) to make the extension even easier for others to use.
 
 ### Further reading
 
@@ -86,7 +86,7 @@ Consent-O-Matic currently works with these CMPs:
 
 ## Extending Consent-O-Matic
 
-If your favorite CMP is missing from the current list, feel free to either create a custom list that you can add (click the extension icon in your browser, click "More add-on settings", click "Rule lists", and enter the URL of your custom list.). If you **really** want to want to contribute, feel free to create a Pull Request while you're at it.
+If your favorite CMP is missing from the current list, feel free to either create a custom list that you can add (click the extension icon in your browser, click "More add-on settings", click "Rule lists", and enter the URL of your custom list.). If you **really** want to contribute, feel free to create a Pull Request while you're at it.
 
 ## Basic Structure
 
@@ -128,7 +128,7 @@ Both the present and showing matcher follow the common structure of [`Matchers`]
 
 ### Methods
 
-Methods are collections of actions. There are 4 methods supported by Consent-O-Matic. `OPEN_OPTIONS`, `DO_CONSENT`, `SAVE_CONSENT`, `HIDE_CMP`
+Methods are collections of actions. There are 4 methods supported by Consent-O-Matic: `OPEN_OPTIONS`, `DO_CONSENT`, `SAVE_CONSENT`, `HIDE_CMP`.
 
 All the methods are optional, and if present the methods will be run in the order given below, when a detector is triggered.
 
@@ -152,7 +152,7 @@ Where the name is one of the 4 supported methods, and action is the [action](#ac
 
 ## DOM Selection
 
-Most actions and matchers have some target that they apply to. For this reason Consent-O-Matic has a DOM selection mechanism that can easily help with selecting the correct dom element.
+Most actions and matchers have some target that they apply to. For this reason Consent-O-Matic has a DOM selection mechanism that can easily help with selecting the correct DOM element.
 
 ```json
 "parent": {
@@ -185,7 +185,7 @@ There are 2 parts, `parent` and `target`. The `parent` is optional but if it exi
 
 All the parameters to `parent` and `target` except `selector` are optional.
 
-The selection method works by using the css selector from `selector` and then filtering the resulting DOM nodes via the various available filters:
+The selection method works by using the CSS selector from `selector` and then filtering the resulting DOM nodes via the various available filters:
 
 * `textFilter` filters all nodes that does not include the given text. It can also be given as an array `"textFilter":["filter1", "filter2"]` and then it filters all nodes that does not include one of the given text filters.
 
@@ -382,7 +382,7 @@ Example:
 
 ### Hide
 
-This action sets css class 'ConsentOMatic-CMP-Hider' on the DOM selection. The default css rules will then set opacity to 0 on the element.
+This action sets CSS class 'ConsentOMatic-CMP-Hider' on the DOM selection. The default CSS rules will then set opacity to 0 on the element.
 
 Example:
 ```json
